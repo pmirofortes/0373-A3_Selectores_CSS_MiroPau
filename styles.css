@@ -1,6 +1,5 @@
 
 
-
 /* Regla 1.*/
 * {
     font-family:"Ubuntu";
@@ -22,7 +21,7 @@ h1 {
     color: lightcyan;
 }
 /* Regla 5.*/
-.selector {
+.selectors {
     padding: 5%;
     border:solid darkcyan 1px;
     border-radius: 5px;
@@ -32,6 +31,11 @@ h1 {
     color: lightgoldenrodyellow;
 }
 /* Regla 7.*/
+h2.selector, h2#universal {
+    background-color: darkcyan;
+    padding: 1%;
+    border-radius: 5px;
+}
 /* Regla 8.*/
 span {
     font-weight: 900;
@@ -39,6 +43,9 @@ span {
     color: white;
 }
 /* Regla 9.*/
+a>li {
+    text-decoration: none;
+}
 /* Regla 10.*/
 h3 {
     background-color: rgba(0, 139, 139, 0.529);
@@ -46,9 +53,43 @@ h3 {
     border-radius: 5px;
 }
 /* Regla 11.*/
+#gallery div {
+    width: 100%;
+}
 /* Regla 12.*/
 img {
     width: 100%;
     border: solid darkcyan 1px;
     border-radius: 5px;
 }
+
+
+/* Reglas Tabla*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: none;
+  }
+  
+  thead {
+    font-weight: bold;
+  }
+  
+  .gray {
+    background-color: lightgray;
+  }
+  
+
+  td:nth-child(1) {
+    font-style: italic;
+    text-decoration: underline;
+  }
+  
+  

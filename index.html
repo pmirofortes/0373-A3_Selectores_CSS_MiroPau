@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./resources/favicon.svg" type="image/x-icon">
     <style>
         .ubuntu-regular {
             font-family: "Ubuntu", serif;
@@ -20,37 +21,40 @@
 </head>
 
 <body>
+    <!-- Regla 1: Cambiar el tipo de fuente del documento usando el selector universal * -->
+    <!-- Regla 2: El body tiene margen 0 y relleno de 20% en los lados derecho e izquierdo -->
     <h1>CSS Selectors</h1>
+    <!-- Regla 3: Los elementos h1 estarán subrayados, de color darkcyan y alineados al centro -->
+
     <p>A CSS selector selects the HTML element(s) you want to style.</p>
     <div class="selectors">
+        <!-- Regla 5: Clase selectors tiene relleno 5%, borde sólido darkcyan y esquinas redondeadas de 5px -->
         <h2>CSS Selectors</h2>
         <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
         <p>We can divide CSS selectors into five categories:</p>
         <ul>
             <li>Simple selectors (select elements based on name, id, class)</li>
-            <li>Combinator selectors (select elements based on a specific relationship between them)</li>
-            <li>Pseudo-class selectors (select elements based on a certain state)
-            </li>
-            <li>Pseudo-elements selectors (select and style a part of an element)</li>
-            <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+            <li><a href="https://www.w3schools.com/css/css_combinators.asp">Combinator selectors</a> (select elements based on a specific relationship between them)</li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo-class selectors</a> (select elements based on a certain state)</li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Pseudo-elements selectors</a> (select and style a part of an element)</li>
+            <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp">Attribute selectors</a> (select elements based on an attribute or attribute value)</li>
+            <!-- Regla 9: Los enlaces (a) hijos directos de li no tendrán subrayado -->
         </ul>
     </div>
     <hr>
     <h2 class="selector">The CSS <span>element</span> Selector</h2>
+    <!-- Regla 4: Clase selector tiene color lightcyan -->
+    <!-- Regla 7: h2 con clase selector tiene fondo darkcyan, relleno de 1% y esquinas redondeadas de 5px -->
     <p>The element selector selects HTML elements based on the element <span>name</span> (body, p, h1, h5, a, div, etc.).</p>
+    <!-- Regla 8: span tiene font-weight 900, fondo negro y texto blanco -->
     <hr>
     <h2 class="selector">The CSS <span>id</span> Selector</h2>
+    <!-- Regla 4 y Regla 7 aplican aquí también -->
     <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
-    <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
-    <p>To select an element with a specific id, write a hash <span>(#)</span> character, followed by the id of the element.</p>
     <hr>
-    <h2 class="selector">The CSS <span>class</span> Selector</h2>
-    <p>The class selector selects HTML elements with a specific class attribute.</p>
-    <p>To select elements with a specific class, write a period <span>(.)</span> character, followed by the class name.</p>
-    <hr>
-
     <h2 id="universal">The CSS <span>Universal</span> Selector</h2>
-    <p>The universal selector <span>(*)</span> selects all HTML elements on the page.</p>
+    <!-- Regla 6: El id universal tiene color lightgoldenrodyellow -->
+    <!-- Regla 7: h2 con id universal tiene fondo darkcyan, relleno 1% y esquinas redondeadas de 5px -->
 
     <div>
         <p>Use our <a href="https://www.w3schools.com/cssref/trysel.asp" target="_blank">CSS Selector Tester</a> to demonstrate the different selectors. </p>
@@ -58,14 +62,62 @@
     <hr>
 
     <div id="gallery">
+        <!-- Regla 11: Div descendiente de id gallery tiene ancho width 100% -->
         <div>
             <h3>CSS Syntax</h3>
+            <!-- Regla 10: h3 tiene fondo rgba, relleno 0.5px y esquinas redondeadas de 5px -->
             <img src="./resources/regla_css.jpg" alt="">
+            <!-- Regla 12: img tiene ancho 100%, borde darkcyan y esquinas redondeadas de 5px -->
         </div>
         <div>
             <h3>All CSS Simple Selectors</h3>
+            <!-- Regla 10 aplica también -->
             <img src="./resources/selectors.png" alt="">
+            <!-- Regla 12 aplica también -->
         </div>
+    </div>
+    <hr>
+
+    <div>
+        <table border="1">
+            <thead>
+                <td>Selector</td>
+                <td>Example</td>
+                <td>Example description</td>
+            </thead>
+            <tbody>
+                <tr class="gray">
+                    <td>#id</td>
+                    <td>#firstname</td>
+                    <td>Selects the element with id="firstname"</td>
+                </tr>
+                <tr>
+                    <td>.class</td>
+                    <td>.intro</td>
+                    <td>Selects all elements with class="intro"</td>
+                </tr>
+                <tr class="gray">
+                    <td>element.class</td>
+                    <td>p.intro</td>
+                    <td>Selects only <pre><code><p></code></pre> elements with class="intro"</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>Selects all elements</td>
+                </tr>
+                <tr class="gray">
+                    <td>element</td>
+                    <td>p</td>
+                    <td>Selects all <> elements</td>
+                </tr>
+                <tr>
+                    <td>element,element,..</td>
+                    <td>div, p</td>
+                    <td>Selects all <pre><code><p></code></pre> elements and all <> elements</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
